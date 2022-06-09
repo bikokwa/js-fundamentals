@@ -1,29 +1,42 @@
-// Data Types in JavaScript
+// Type Conversion
 
-/*
-Primitive Data Types:
-- Stored directly in the location the variable accesses
-- Stored on the stack
+// Number to string
+let val;
 
-Reference Data Types:
-- Accessed by reference.
-- Objects that are stored on the heap.
-- A pointer to a location in memory.
-*/
+val = String(5);
+val = String(4+4);
 
-const name = 'Biko biks';
-console.log(typeof name)
+// Bool to string
+val = String(true);
 
-const age = 30;
-console.log(typeof age)
+// Date to string
+val = String(new Date());
 
-const haskids = true;
-console.log(typeof haskids)
+// Array to string
+val = String([1,2,3,4,5]);
 
-const car = null;
+// toString()
+val = (55).toString();
+val = (true).toString();
 
-console.log(typeof car)
+// Strings to numbers
+val = Number('55');
+val = Number(true);
+val = Number(null);
+val = Number('hello');
+val = Number([1,2,3,4,5])
 
-let test;
+val = parseInt('100');
 
-console.log(test)
+console.log(val)
+console.log(typeof val)
+//console.log(val.length)
+console.log(val.toFixed(2));
+
+// Type coercion
+const val1 = 5;
+const val2 = 6;
+const sum = val1 + val2;
+
+console.log(sum)
+console.log(typeof sum)
