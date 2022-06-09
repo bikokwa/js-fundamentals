@@ -1,29 +1,29 @@
-// var, let, const
+// Data Types in JavaScript
 
-var name = 'John Doe';
-console.log(name)
-name = 'Steve Smith';
-console.log(name)
+/*
+Primitive Data Types:
+- Stored directly in the location the variable accesses
+- Stored on the stack
 
-// Init var
-var greeting;
-console.log(greeting)
-greeting = 'Hello';
-console.log(greeting)
+Reference Data Types:
+- Accessed by reference.
+- Objects that are stored on the heap.
+- A pointer to a location in memory.
+*/
 
-const person = {
-    name: 'John',
-    age: 30
-}
+const name = 'Biko biks';
+console.log(typeof name)
 
-console.log(person)
+const age = 30;
+console.log(typeof age)
 
-person.name = 'Sara';
+const haskids = true;
+console.log(typeof haskids)
 
-console.log(person)
+const car = null;
 
-const numbers = [1,2,3,4,5];
-console.log(numbers)
+console.log(typeof car)
 
-numbers.push(6)
-console.log(numbers)
+let test;
+
+console.log(test)
