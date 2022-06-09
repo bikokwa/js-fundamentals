@@ -1,42 +1,34 @@
-// Type Conversion
+// Block Scope With let and const
 
-// Number to string
-let val;
+// Global Scope
 
-val = String(5);
-val = String(4+4);
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Bool to string
-val = String(true);
+function test(){
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function scope: ', a,b,c)
+}
 
-// Date to string
-val = String(new Date());
+// block level scope
 
-// Array to string
-val = String([1,2,3,4,5]);
+if (true) {
+    // Block Scope
 
-// toString()
-val = (55).toString();
-val = (true).toString();
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Block scope: ', a,b,c)
+}
 
-// Strings to numbers
-val = Number('55');
-val = Number(true);
-val = Number(null);
-val = Number('hello');
-val = Number([1,2,3,4,5])
+for (var a = 0; a < 10;a++){
+    console.log(a)
+}
 
-val = parseInt('100');
 
-console.log(val)
-console.log(typeof val)
-//console.log(val.length)
-console.log(val.toFixed(2));
+console.log('Global scope: ', a,b,c)
 
-// Type coercion
-const val1 = 5;
-const val2 = 6;
-const sum = val1 + val2;
-
-console.log(sum)
-console.log(typeof sum)
+//test();
